@@ -7,8 +7,10 @@
   height: 80px;
 }
 
+.MuiAppBar-colorPrimary-7 {
+  background: linear-gradient(to bottom, rgba(0,76,175,1) 0%, rgba(5,102,182,1) 46%, rgba(9,122,188,1) 71%, rgba(4,159,215,1) 100%)
+}
 .App-header {
-  background-color: #222;
   height: 60px;
   padding: 20px;
   color: white;

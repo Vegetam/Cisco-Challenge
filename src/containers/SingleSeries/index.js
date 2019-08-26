@@ -11,6 +11,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
+import noimage from './utils/no_image';
 
 const styles = {
     appBar: {
@@ -80,7 +81,7 @@ class SingleSeries extends Component{
                                 <ListItem button>
                                     {
                                         show.image != null &&
-                                        <img alt="Show" src={show.image.medium}/>
+                                        <img alt="Show" src={show.image? show.image.medium: noimage}/>
                                     }
                                 </ListItem>
                             </div>
@@ -116,11 +117,13 @@ class SingleSeries extends Component{
                                     </ListItem>
                                     <Divider />
                                      <ListItem button>
-                                        <ListItemText primary="Url first episode" secondary={show._embedded.episodes[0].url} />
+                                     <ListItemText primary="Url last episode"  />
+                                        <a href={show._embedded.episodes[0].url} target="_blank">{show._embedded.episodes[0].name}</a>
                                     </ListItem>
                                     <Divider />
                                      <ListItem button>
-                                        <ListItemText primary="Url last episode" secondary={show._embedded.episodes[show._embedded.episodes.length-1].url} />
+                                      <ListItemText primary="Url last episode"  />
+                                        <a href={show._embedded.episodes[show._embedded.episodes.length-1].url} target="_blank">{show._embedded.episodes[show._embedded.episodes.length-1].name}</a>
                                     </ListItem>
                                     <Divider />
                                     <ListItem button>
