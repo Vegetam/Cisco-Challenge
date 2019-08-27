@@ -30,15 +30,19 @@ function Transition(props) {
 }
 
 class SingleSeries extends Component{
-    state={
+    constructor(props) {
+    super(props);
+
+     this.state= {
         open:false,
         show:null
-    }
-
-    handleClose = () => {
-        this.setState({ open: false });
     };
+    
+  }
 
+handleClose = () => {
+        this.setState({ open: false });
+};
     componentDidMount(){
         const {id} = this.props.match.params;
 

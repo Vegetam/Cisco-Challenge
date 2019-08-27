@@ -7,19 +7,26 @@ import TextField from '@material-ui/core/TextField';
 
 class Series extends Component{
 
-    state={
+
+   constructor(props) {
+    super(props);
+
+    this.state ={
         series:[],
         seriesName:'',
         isFetching: false,
         importantText:''
-    }
+    };
 
+}
     onSeriesInputChange = e =>{
         this.setState({seriesName:e.target.value, isFetching:true})
         fetch(`http://api.tvmaze.com/search/shows?q=${e.target.value}`)
             .then((response)=> response.json())
             .then(json => this.setState({series:json, isFetching:false}))
     }
+ 
+
 
     render(){
         const {series, seriesName, isFetching,importantText}=this.state

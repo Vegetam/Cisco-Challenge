@@ -1,11 +1,10 @@
 import React from 'react';
-import loaderSrc from '../../assets/loader.gif';
 
 const Loader = props =>(
     <div>
         <img
+        	src="../../assets/loader.gif"
             alt="Loader icon"
-            src={loaderSrc}
             style={{width: 100}}
         />
     </div>
