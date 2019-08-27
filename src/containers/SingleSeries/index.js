@@ -121,7 +121,7 @@ handleClose = () => {
                                     </ListItem>
                                     <Divider />
                                      <ListItem button>
-                                     <ListItemText primary="Url last episode"  />
+                                     <ListItemText primary="Url First episode"  />
                                         <a href={show._embedded.episodes[0].url} target="_blank">{show._embedded.episodes[0].name}</a>
                                     </ListItem>
                                     <Divider />
