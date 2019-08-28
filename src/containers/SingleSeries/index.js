@@ -11,7 +11,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
-import noimage from './utils/no_image';
+import noimage from '../../utils/no_image';
 
 const styles = {
     appBar: {
@@ -84,7 +84,6 @@ handleClose = () => {
                             <div>
                                 <ListItem button>
                                     {
-                                        show.image != null &&
                                         <img alt="Show" src={show.image? show.image.medium: noimage}/>
                                     }
                                 </ListItem>

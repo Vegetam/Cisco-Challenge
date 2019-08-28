@@ -60,7 +60,10 @@ class Series extends Component{
                     }
                     {
                         !isFetching && <SeriesList list={this.state.series}/>
+                          
                     }
+        
+
                 </div>
             </div>
         )
